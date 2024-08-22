@@ -1,0 +1,43 @@
+.projects{
+    padding:0 20px;
+}
+.projectsHeading
+{
+    font-size: 28px;
+    font-weight: bold;
+    color:white;
+    padding: 8px 4px;
+}
+.projname
+{
+    font-size: 20px;
+}
+.projGrid{
+    max-width: 1000px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    /* height: fit-content; */
+    width:100%;
+    gap:12px;
+    align-items: center;
+    /* align-content: center; */
+}
+.runningProject
+{
+    width:100%;
+    min-height: 800px;
+}
+.description{
+    color:#ffffffe4;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.projectImg img{
+    width:100%;
+}
+@media screen and (max-width:400px) {
+    .projects{
+        padding:0 5px;
+    }
+}
