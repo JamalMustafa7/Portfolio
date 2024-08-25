@@ -29,9 +29,10 @@ const Navbar = () => {
             <li><a href="#about1">About</a></li>
             <li><a href="#technology">Technology</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#blogs">Blogs</a></li>
-            <li><MdDarkMode size={18}/> </li>
+            {/* <li><a href="#blogs">Blogs</a></li> */}
+            {/* <li><MdDarkMode size={18}/> </li> */}
         </ul>
         <div className={styles.hamburger}  ref={hamburger} onClick={()=>setIsOpen(!isOpen)}>
             <span style={{transform:isOpen&&"translateY(6.5px) rotate(50deg)"}}></span>
