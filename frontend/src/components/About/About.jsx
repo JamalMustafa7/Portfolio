@@ -11,17 +11,12 @@ const About = () => {
 
         const id=setInterval(()=>
         {
-            console.log(keywords[currentIndex].length)
             if(currentLetter+1<=keywords[currentIndex].length)
             {
-                console.log('cond1')
-                console.log(keywords[currentIndex].substring(0, currentLetter+1) + '|')
                 setText(keywords[currentIndex].substring(0, currentLetter+1) + '|');
                 currentLetter++;
             }
             else{
-                console.log('cond2')
-
                 currentLetter=0
                 currentIndex=(currentIndex+1)%keywords.length
             }

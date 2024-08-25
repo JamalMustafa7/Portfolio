@@ -4,19 +4,30 @@ import styles from './navbar.module.css'
 const Navbar = () => {
     const hamburger=useRef(null)
     const [isOpen,setIsOpen]=useState(false)
+    function handleClick()
+    {
+        if(isOpen)
+        {
+            setIsOpen(false)
+        }
+    }
     useEffect(()=>{
         if(isOpen)
         {
             function changeOpen(event)
             {
-                if( event.target!==hamburger.current && !hamburger.current.contains(event.target))
+                if(event.target.tagName ==="A")
+                {
+                    return;
+                }
+                if( event.target!==hamburger.current && !hamburger.current.contains(event.target) && event.target.tagNmae!=="A")
                 {
                     console.log(event.target)
                     setIsOpen(!isOpen);
                 }
+                
             }
             document.addEventListener('mousedown',changeOpen)
-    
             return ()=>document.removeEventListener('mousedown',changeOpen);
         }
     },[isOpen])
@@ -26,11 +37,11 @@ const Navbar = () => {
             <img src='brandLogo.png' />
         </div>
         <ul className={`${styles.navlinks} ${isOpen&&styles.open}`} >
-            <li><a href="#about1">About</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li onClick={handleClick}><a href="#about1">About</a></li>
+            <li onClick={handleClick}><a href="#technology">Technology</a></li>
+            <li onClick={handleClick}><a href="#projects">Projects</a></li>
+            <li onClick={handleClick}><a href="#experience">Experience</a></li>
+            <li onClick={handleClick}><a href="#contact">Contact Us</a></li>
             {/* <li><a href="#blogs">Blogs</a></li> */}
             {/* <li><MdDarkMode size={18}/> </li> */}
         </ul>

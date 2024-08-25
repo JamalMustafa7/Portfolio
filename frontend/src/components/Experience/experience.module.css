@@ -8,6 +8,26 @@
 .education{
     padding: 0 20px;
 }
+.downloadButton {
+    display: inline-block;
+    padding: 10px 20px;
+    width:max-content;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(33, 150, 243); /* Matching the experience background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin:10px;
+  }
+  
+  .downloadButton:hover {
+    background-color: rgb(30, 136, 229); /* Slightly darker shade on hover */
+  }
+  
 @media screen and (max-width:600px) {
     .education{
         padding: 0 5px;

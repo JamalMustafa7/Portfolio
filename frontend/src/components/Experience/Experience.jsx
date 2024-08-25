@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './experience.module.css';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
-
 const ExperienceTimeline = () => {
   return (
     <div className={styles.education} id='experience'>
@@ -96,6 +94,9 @@ const ExperienceTimeline = () => {
           iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
         />
       </VerticalTimeline>
+      <a href="/education/cv.pdf" download="Muhammad_Jamal_Mustafa_CV.pdf" className={styles.downloadButton}>
+        Download My CV
+      </a>
     </div>    
   );
 };
